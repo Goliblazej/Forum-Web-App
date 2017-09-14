@@ -39,6 +39,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.7\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -117,14 +124,237 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bootflat\angularicons\angularicons.svg" />
+    <Content Include="Bootflat\bootflat\css\bootflat.css" />
+    <Content Include="Bootflat\bootflat\css\bootflat.min.css" />
+    <Content Include="Bootflat\bootflat\img\check_flat\default.png" />
+    <Content Include="Bootflat\bootflat\js\icheck.min.js" />
+    <Content Include="Bootflat\bootflat\js\jquery.fs.selecter.min.js" />
+    <Content Include="Bootflat\bootflat\js\jquery.fs.stepper.min.js" />
+    <Content Include="Bootflat\css\bootstrap.min.css" />
+    <Content Include="Bootflat\css\site.css" />
+    <Content Include="Bootflat\css\site.min.css" />
+    <Content Include="Bootflat\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Bootflat\img\ascii-logo.gif" />
+    <Content Include="Bootflat\img\bootflat-ui-kit.jpg" />
+    <Content Include="Bootflat\img\design.png" />
+    <Content Include="Bootflat\img\divider.png" />
+    <Content Include="Bootflat\img\fast.png" />
+    <Content Include="Bootflat\img\feature-bootstrap.png" />
+    <Content Include="Bootflat\img\feature-css.png" />
+    <Content Include="Bootflat\img\feature-lightweight.png" />
+    <Content Include="Bootflat\img\feature-mobile.png" />
+    <Content Include="Bootflat\img\footer-logo.png" />
+    <Content Include="Bootflat\img\github.png" />
+    <Content Include="Bootflat\img\index.png" />
+    <Content Include="Bootflat\img\Jumbotron.jpg" />
+    <Content Include="Bootflat\img\logo-index.png" />
+    <Content Include="Bootflat\img\logo.png" />
+    <Content Include="Bootflat\img\photo-1.jpg" />
+    <Content Include="Bootflat\img\photo-2.jpg" />
+    <Content Include="Bootflat\img\photo-3.jpg" />
+    <Content Include="Bootflat\img\photo-4.jpg" />
+    <Content Include="Bootflat\img\prototyping.png" />
+    <Content Include="Bootflat\img\share.gif" />
+    <Content Include="Bootflat\img\slider1.jpg" />
+    <Content Include="Bootflat\img\slider2.jpg" />
+    <Content Include="Bootflat\img\slider3.jpg" />
+    <Content Include="Bootflat\img\thumbnail-1.jpg" />
+    <Content Include="Bootflat\img\thumbnail-2.jpg" />
+    <Content Include="Bootflat\img\thumbnail-3.jpg" />
+    <Content Include="Bootflat\img\thumbnail-4.jpg" />
+    <Content Include="Bootflat\img\together.png" />
+    <Content Include="Bootflat\img\wild_flowers.png" />
+    <Content Include="Bootflat\js\application.js" />
+    <Content Include="Bootflat\js\bootstrap.min.js" />
+    <Content Include="Bootflat\js\html5shiv.js" />
+    <Content Include="Bootflat\js\jquery-1.10.1.min.js" />
+    <Content Include="Bootflat\js\respond.min.js" />
+    <Content Include="Bootflat\js\site.min.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="FlatUI\css\flat-ui.css" />
+    <Content Include="FlatUI\css\flat-ui.min.css" />
+    <Content Include="FlatUI\css\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="FlatUI\css\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FlatUI\fonts\glyphicons\flat-ui-icons-regular.svg" />
+    <Content Include="FlatUI\fonts\lato\lato-black.svg" />
+    <Content Include="FlatUI\fonts\lato\lato-bold.svg" />
+    <Content Include="FlatUI\fonts\lato\lato-bolditalic.svg" />
+    <Content Include="FlatUI\fonts\lato\lato-italic.svg" />
+    <Content Include="FlatUI\fonts\lato\lato-light.svg" />
+    <Content Include="FlatUI\fonts\lato\lato-regular.svg" />
+    <Content Include="FlatUI\img\favicon.ico" />
+    <Content Include="FlatUI\img\icons\png\Book.png" />
+    <Content Include="FlatUI\img\icons\png\Calendar.png" />
+    <Content Include="FlatUI\img\icons\png\Chat.png" />
+    <Content Include="FlatUI\img\icons\png\Clipboard.png" />
+    <Content Include="FlatUI\img\icons\png\Compas.png" />
+    <Content Include="FlatUI\img\icons\png\Gift-Box.png" />
+    <Content Include="FlatUI\img\icons\png\Infinity-Loop.png" />
+    <Content Include="FlatUI\img\icons\png\Mail.png" />
+    <Content Include="FlatUI\img\icons\png\Map.png" />
+    <Content Include="FlatUI\img\icons\png\Pensils.png" />
+    <Content Include="FlatUI\img\icons\png\Pocket.png" />
+    <Content Include="FlatUI\img\icons\png\Retina-Ready.png" />
+    <Content Include="FlatUI\img\icons\png\Toilet-Paper.png" />
+    <Content Include="FlatUI\img\icons\png\Watches.png" />
+    <Content Include="FlatUI\img\icons\svg\book.svg" />
+    <Content Include="FlatUI\img\icons\svg\calendar.svg" />
+    <Content Include="FlatUI\img\icons\svg\chat.svg" />
+    <Content Include="FlatUI\img\icons\svg\clipboard.svg" />
+    <Content Include="FlatUI\img\icons\svg\clocks.svg" />
+    <Content Include="FlatUI\img\icons\svg\compas.svg" />
+    <Content Include="FlatUI\img\icons\svg\gift-box.svg" />
+    <Content Include="FlatUI\img\icons\svg\loop.svg" />
+    <Content Include="FlatUI\img\icons\svg\mail.svg" />
+    <Content Include="FlatUI\img\icons\svg\map.svg" />
+    <Content Include="FlatUI\img\icons\svg\paper-bag.svg" />
+    <Content Include="FlatUI\img\icons\svg\pencils.svg" />
+    <Content Include="FlatUI\img\icons\svg\retina.svg" />
+    <Content Include="FlatUI\img\icons\svg\ribbon.svg" />
+    <Content Include="FlatUI\img\icons\svg\toilet-paper.svg" />
+    <Content Include="FlatUI\img\login\icon.png" />
+    <Content Include="FlatUI\img\login\imac-2x.png" />
+    <Content Include="FlatUI\img\login\imac.png" />
+    <Content Include="FlatUI\img\tile\ribbon-2x.png" />
+    <Content Include="FlatUI\img\tile\ribbon.png" />
+    <Content Include="FlatUI\js\flat-ui.js" />
+    <Content Include="FlatUI\js\flat-ui.min.js" />
+    <Content Include="FlatUI\js\vendor\html5shiv.js" />
+    <Content Include="FlatUI\js\vendor\jquery.min.js" />
+    <Content Include="FlatUI\js\vendor\respond.min.js" />
+    <Content Include="FlatUI\js\vendor\video-js.swf" />
+    <Content Include="FlatUI\js\vendor\video.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.1.0.7-build00691.js" />
     <Content Include="scripts\ai.1.0.7-build00691.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="FlatUI\css\flat-ui.css.map" />
+    <Content Include="FlatUI\css\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="FlatUI\css\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="FlatUI\css\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="FlatUI\css\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="FlatUI\fonts\glyphicons\flat-ui-icons-regular.eot" />
+    <Content Include="FlatUI\fonts\glyphicons\flat-ui-icons-regular.ttf" />
+    <Content Include="FlatUI\fonts\glyphicons\flat-ui-icons-regular.woff" />
+    <Content Include="FlatUI\fonts\glyphicons\selection.json" />
+    <Content Include="FlatUI\fonts\lato\lato-black.eot" />
+    <Content Include="FlatUI\fonts\lato\lato-black.ttf" />
+    <Content Include="FlatUI\fonts\lato\lato-black.woff" />
+    <Content Include="FlatUI\fonts\lato\lato-bold.eot" />
+    <Content Include="FlatUI\fonts\lato\lato-bold.ttf" />
+    <Content Include="FlatUI\fonts\lato\lato-bold.woff" />
+    <Content Include="FlatUI\fonts\lato\lato-bolditalic.eot" />
+    <Content Include="FlatUI\fonts\lato\lato-bolditalic.ttf" />
+    <Content Include="FlatUI\fonts\lato\lato-bolditalic.woff" />
+    <Content Include="FlatUI\fonts\lato\lato-italic.eot" />
+    <Content Include="FlatUI\fonts\lato\lato-italic.ttf" />
+    <Content Include="FlatUI\fonts\lato\lato-italic.woff" />
+    <Content Include="FlatUI\fonts\lato\lato-light.eot" />
+    <Content Include="FlatUI\fonts\lato\lato-light.ttf" />
+    <Content Include="FlatUI\fonts\lato\lato-light.woff" />
+    <Content Include="FlatUI\fonts\lato\lato-regular.eot" />
+    <Content Include="FlatUI\fonts\lato\lato-regular.ttf" />
+    <Content Include="FlatUI\fonts\lato\lato-regular.woff" />
+    <Content Include="FlatUI\js\vendor\jquery.min.map" />
+    <Content Include="Bootflat\angularicons\angularicons.eot" />
+    <Content Include="Bootflat\angularicons\angularicons.ttf" />
+    <Content Include="Bootflat\angularicons\angularicons.woff" />
+    <Content Include="Bootflat\bootflat\css\bootflat.css.map" />
+    <Content Include="Bootflat\bootflat\img\check_flat\default.psd" />
+    <Content Include="Bootflat\bootflat\scss\.csscomb.json" />
+    <Content Include="Bootflat\bootflat\scss\.csslintrc" />
+    <Content Include="Bootflat\bootflat\scss\bootflat.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_accordion.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_alert.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_breadcrumb.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_button.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_button_group.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_calendar.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_checkbox_radio.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_dropdown.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_footer.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_form.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_global.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_jumbotron.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_label_badge.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_list.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_media_list.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_modal.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_navbar.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_pager.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_pagination.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_panel.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_pill.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_popover.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_pricing.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_progress.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_selecter.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_stepper.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_tab.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_thumbnail.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_timeline.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_toggle.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_tooltip.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_typography.scss" />
+    <Content Include="Bootflat\bootflat\scss\bootflat\_well.scss" />
+    <Content Include="Bootflat\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootflat\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Bootflat\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Bootflat\js\site.min.map" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\MaterialDesignBootstrap\bootstrap.min.js" />
+    <Content Include="scripts\MaterialDesignBootstrap\jquery-3.2.1.min.js" />
+    <Content Include="scripts\MaterialDesignBootstrap\mdb.min.js" />
+    <Content Include="scripts\MaterialDesignBootstrap\popper.min.js" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\README.txt" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\data\_colors.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\data\_functions.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\data\_mixins.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\data\_prefixer.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\data\_variables-b4.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\data\_variables.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_animations.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_badge.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_breadcrumb.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_buttons.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_cards-basic.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_carousel-basic.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_collapse.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_deprecated.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_dropdowns.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_footer.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_forms-basic.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_global.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_helpers.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_jumbotron.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_list-group.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_masks.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_modals.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_msc.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_navbar.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_pagination.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_progress.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_tables.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_typography.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\free\_waves.scss" />
+    <Content Include="scripts\MaterialDesignBootstrap\sass\mdb\_custom.scss" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,6 +367,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Post\List.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,7 +382,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
